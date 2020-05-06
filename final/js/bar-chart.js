@@ -50,12 +50,12 @@ g.append("text")
 	.attr("fill", "white")
 	.text("Confirmed Cases");
 
-//d3.json("https://github.com/Yvonne-ZJ/YvonneZhao/raw/master/con1.json").then(function(data){
+d3.json("https://cdn.jsdelivr.net/gh/Yvonne-ZJ/CDN@1.0/final/con1.json").then(function(data){
 //	https://github.com/Yvonne-ZJ/YvonneZhao/blob/master/con1.json
 //https://github.com/robinson911/robinson911/blob/master/ljweibo.json
 
 //https://raw.githubusercontent.com/robinson911/robinson911/master/ljweibo.json
-d3.json("https://raw.githubusercontent.com/Yvonne-ZJ/YvonneZhao/master/con1.json").then(function(data){
+//d3.json("https://raw.githubusercontent.com/Yvonne-ZJ/YvonneZhao/master/con1.json").then(function(data){
 //d3.json("con1.json",function(data) {
 //d3.json("https://corona.lmao.ninja/v2/historical?lastdays=400").then(function(data){
 	// initiate country selection values:

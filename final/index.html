@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Covid-19 Confirmed Cases</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand h3">COVID-19 <span class="title-word">CONFIRMED CASES</span> </span>
+        <span class = "navbar-brand h3 current-date">
+            <script> document.write(new Date().toLocaleDateString()); </script>
+        </span>
+    </nav>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <!-- World Map -->
+        <div class="row">
+            <div class="col-sm-9">
+              <div class="row">
+                <div id="my_dataviz" class="row">
+                  <p>- World Map:</p>
+                </div>
+              </div>
+                <!-- Data Toggle Buttons -->
+                <div class="row">
+                    <div class="btn-group toggle-btn" role="group">
+                      <button type="button" value="cases" class="btn btn-outline-secondary" onclick="dataToggle(this.value)">Total Cases</button>
+                      <button type="button" value="todayCases" class="btn btn-outline-secondary" onclick="dataToggle(this.value)">Today Cases</button>
+                      <button type="button" value="deaths" class="btn btn-outline-secondary" onclick="dataToggle(this.value)">Deaths</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Infor List -->
+            <div class="col-sm-3">
+                <div class="list-group info-list">
+                  <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/symptoms.html?topic=ex-col-faq#a" class="list-group-item list-group-item-action">- What is Covid-19?</a>
+                  <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/prevention-risks.html#h" class="list-group-item list-group-item-action">- How coronavirus spreads?</a>
+                  <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/symptoms.html#s" class="list-group-item list-group-item-action">- Symptoms of Covid-19</a>
+                  <a href="https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection/prevention-risks.html#p" class="list-group-item list-group-item-action">- How to prevent?</a>
+                </div>
+            </div>
+        </div>
+ 
+
+        <!-- Spot Chart -->
+        <div class="row">
+          <div id="bar-chart" class="col-sm-12">
+            <p>- Countries:</p>
+            <!-- Country Select Input -->
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="country-select">Country: </label>
+              </div>
+              <select class="custom-select" id="country-select">
+                <option selected>Select a country/province</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!-- External JS libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/user/repo@version/file"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<!-- Custom JS -->
+<script src="js/world-map.js"></script>
+<script src="js/bar-chart.js"></script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

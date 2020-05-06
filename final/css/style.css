@@ -1,9 +1,12 @@
+/*
+
 html, body {
-	background-color: black;
+	background-color: whtie;
 }
 
+*/
 p {
-    color: white;
+    color: red;
     font-size: 1.2em;
     margin-bottom: 50px;
 }
